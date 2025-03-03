@@ -1,20 +1,16 @@
-// CassKennedyCh3Project.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
+//This branch of the program is designed to help the user adjust the amount of ingredients when changing the amount of a recipe.
 #include <iostream>
-
+using namespace std;
 int main()
 {
-    std::cout << "Hello World!\n";
+    float initialAmount = 48.0;
+    float initialSugar = 1.5;
+    float initialButter = 1.0;
+    float initialFlour = 2.75;
+    //The initial amounts given by the recipe, in cookies or cups.
+    int newAmount;
+    cout << "How many cookies would you like to make?";
+    cin >> newAmount;
+    cout << "To make " << newAmount << " cookies, you need " << initialSugar * (newAmount / initialAmount) << " cups of sugar, " << initialButter * (newAmount / initialAmount) << " cups of butter, and " << initialFlour * (newAmount / initialAmount) << " cups of flour.";
+    return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
