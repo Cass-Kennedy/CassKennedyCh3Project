@@ -1,16 +1,16 @@
-//This branch of the program is designed to help the user adjust the amount of ingredients when changing the amount of a recipe.
+//This branch of the program is designed to help the user practice simple math problems.
 #include <iostream>
+#include <random>
 using namespace std;
 int main()
 {
-    float initialAmount = 48.0;
-    float initialSugar = 1.5;
-    float initialButter = 1.0;
-    float initialFlour = 2.75;
-    //The initial amounts given by the recipe, in cookies or cups.
-    int newAmount;
-    cout << "How many cookies would you like to make?";
-    cin >> newAmount;
-    cout << "To make " << newAmount << " cookies, you need " << initialSugar * (newAmount / initialAmount) << " cups of sugar, " << initialButter * (newAmount / initialAmount) << " cups of butter, and " << initialFlour * (newAmount / initialAmount) << " cups of flour.";
+    random_device rd;
+    mt19937 gen(rd());
+    uniform_int_distribution<> dist(1, 9999); //These three lines set the framework for generating 1-4 digit numbers
+    int addendOne = dist(gen); //Generates the two numbers
+    int addendTwo = dist(gen);
+    cout << addendOne << "+" << addendTwo; //Displays the problem
+    cin.get();
+    cout << addendOne + addendTwo; //Displays the answer
     return 0;
 }
